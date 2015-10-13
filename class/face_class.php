@@ -37,7 +37,7 @@ class Face {
           $ret[]=$this->face[$num][$i];
         }
       break;
-      case "c"
+      case "c":
         for($i=0;$i<$this->dimension;$i++){
           $ret[]=$this->face[$i][$num];
         }
