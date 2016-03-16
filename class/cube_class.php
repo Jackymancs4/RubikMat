@@ -4,23 +4,29 @@ class Cube {
   public $cube=array();
 
   function Cube ($dimension,$symbols=false) {
-    $m=6;
-     
-    for ($i=0; $i<$m; $i++) {
-      if ($symbols==false) {
-        $this->cube[$i]=new Face($dimension,$i);
-      } else {
-        $this->cube[$i]=new Face($dimension,$symbols[$i]);
+
+    $n=$dimension+2;
+
+    for ($i=0; $i < $n+2; $i++) {
+      for ($j=0; $j < $n+2; $j++) { 
+        for ($k=0; $k < $n+2; $k++) { 
+
+          $this->cube[$i][$j][$k]=0;
+
+        }   
       }
     }
+
+    $this->init();
+
   }
   
   public function print_cube () {
 
-    for($i=0;$i<count($this->cube);$i++){
-      $this->cube[$i]->print_face();
-      echo "<br>";
-    }
+  }
+
+  public function init () {
+    
   }
 
 }
